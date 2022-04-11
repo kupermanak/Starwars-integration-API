@@ -9,7 +9,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			getDataPeople: async () => {
 				try {
-					let response = await fetch("https://www.swapi.tech/api/people");
+					let response = await fetch(process.env.APIHOSTURL + "/people");
 
 					const data = await response.json();
 
